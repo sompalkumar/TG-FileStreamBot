@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> 由于上游的 Go 版本已经可用，本 Fork 不再维护，但当前 Python 镜像保留，你仍然可以通过 Docker 部署本 Fork。
+
 <hr>
 <h1 align="center">Telegram File Stream Bot</h1>
 <p align="center">
