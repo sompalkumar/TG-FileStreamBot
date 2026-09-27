@@ -35,7 +35,7 @@ async def media_receive_handler(_, m: Message):
     logger.info(f"直链： {stream_link} for {m.from_user.first_name}")
     try:
         await m.reply_text(
-            text="直链已准备好(￣▽￣)／ 单击下面的链接可直接复制：\n<code>{}</code>\n(<a href='{}'>短链接</a>)".format(
+            text="CLICK TO COPY：\n<code>{}</code>\n(<a href='{}'></a>)".format(
                 stream_link, short_link
             ),
             quote=True,
@@ -46,7 +46,7 @@ async def media_receive_handler(_, m: Message):
         )
     except errors.ButtonUrlInvalid:
         await m.reply_text(
-            text="<code>{}</code>\n\n短链: {})".format(
+            text="<code>{}</code>\n\nOPEN/PLAY: {})".format(
                 stream_link, short_link
             ),
             quote=True,
