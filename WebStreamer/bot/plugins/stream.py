@@ -35,13 +35,13 @@ async def media_receive_handler(_, m: Message):
     logger.info(f"直链： {stream_link} for {m.from_user.first_name}")
     try:
         await m.reply_text(
-            text="CLICK TO COPY：\n<code>{}</code>\n(<a href='{}'></a>)".format(
+            text="CLICK TO COPY：\n<code>{}</code>\n".format(
                 stream_link, short_link
             ),
             quote=True,
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("打开", url=stream_link)]]
+                [[InlineKeyboardButton("OPEN", url=stream_link)]]
             ),
         )
     except errors.ButtonUrlInvalid:
